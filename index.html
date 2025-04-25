@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="game_board.js"></script>
+    <title>Test gra</title>
+</head>
+<style>
+    .square {
+  border-radius: 25px;
+  border-style: solid;
+  border-color:black;
+  margin: auto;
+  border: 1px solid red;
+  background-color:white;
+  padding: 14px 28px;
+  font-size: 46px;
+  font-family: "Courier";
+  cursor: pointer;
+  text-align: center;
+}
+
+.largeText {
+  border-radius: 25px;
+  display: block;
+  color: black;
+  font-size: 32px;
+  font-family: "Helvetica";
+  text-align: center;
+  z-index: 10;
+  margin: auto;
+}
+    #floating-message {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 88px;
+  color: #C1121F;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #C1121F;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  animation: none;
+}
+
+@keyframes floatInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+}
+
+</style>
+
+<body onload = "playGame()">
+<div id="floating-message"></div>
+
+<TABLE style="margin:auto;">
+    <TR>
+        <TH><button class="square" id="square0"
+                    onclick='squareClicked(0)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square1"
+                    onclick='squareClicked(1)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square2"
+                    onclick='squareClicked(2)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square3"
+                    onclick='squareClicked(3)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square4"
+                    onclick='squareClicked(4)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square5"
+                    onclick='squareClicked(5)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH><button class="square" id="square6"
+                    onclick='squareClicked(6)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square7"
+                    onclick='squareClicked(7)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square8"
+                    onclick='squareClicked(8)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square9"
+                    onclick='squareClicked(9)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square10"
+                    onclick='squareClicked(10)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square11"
+                    onclick='squareClicked(11)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH><button class="square" id="square12"
+                    onclick='squareClicked(12)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square13"
+                    onclick='squareClicked(13)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square14"
+                    onclick='squareClicked(14)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square15"
+                    onclick='squareClicked(15)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square16"
+                    onclick='squareClicked(16)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square17"
+                    onclick='squareClicked(17)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH><button class="square" id="square18"
+                    onclick='squareClicked(18)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square19"
+                    onclick='squareClicked(19)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square20"
+                    onclick='squareClicked(20)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square21"
+                    onclick='squareClicked(21)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square22"
+                    onclick='squareClicked(22)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square23"
+                    onclick='squareClicked(23)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH><button class="square" id="square24"
+                    onclick='squareClicked(24)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square25"
+                    onclick='squareClicked(25)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square26"
+                    onclick='squareClicked(26)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square27"
+                    onclick='squareClicked(27)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square28"
+                    onclick='squareClicked(28)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square29"
+                    onclick='squareClicked(29)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH><button class="square" id="square30"
+                    onclick='squareClicked(30)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square31"
+                    onclick='squareClicked(31)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square32"
+                    onclick='squareClicked(32)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square33"
+                    onclick='squareClicked(33)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square34"
+                    onclick='squareClicked(34)'>&nbsp;</button></TH>
+        <TH><button class="square" id="square35"
+                    onclick='squareClicked(35)'>&nbsp;</button></TH>
+    </TR>
+    <TR>
+        <TH colspan="8"><button class='largeText' id='startButton' onclick='NewGame()'>New Game</button></TH>
+    </TR>
+</TABLE>
+</body>
+</html>
