@@ -56,7 +56,7 @@ displaySquare(i);
 }
 
 displaySquare = function(aSquare) {
-let squareField = document.getElementById("squareaS"+quare);
+let squareField = document.getElementById("square"+aSquare);
 let valueOfSquare = board[aSquare];
 squareField.innerHTML = displayStrings[valueOfSquare];
 }
